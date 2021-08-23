@@ -6,9 +6,26 @@ const websiteName = document.getElementById("website-name");
 const websiteUrl = document.getElementById("website-url");
 const bookmarkContainer = document.getElementById("bookmarks-container");
 
+let bookmarks = [];
+
 function showModal() {
   modal.classList.add("show-modal");
   websiteName.focus();
+}
+
+function fetchBookmarks() {
+  if (localStorage.getItem("bookmarks")) {
+    bookmarks = JSON.parse(localStorage.getItem("bookmarks"));
+  } else {
+    bookmarks = [
+      {
+        name: "Custom Countdown",
+        url: "https://luisluft.github.io/luftCustomCountdown/",
+      },
+    ];
+    localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+  }
+  console.log("bookmarks :", bookmarks);
 }
 
 function storeBookmark(event) {
@@ -17,6 +34,17 @@ function storeBookmark(event) {
   let urlValue = websiteUrl.value;
   if (!urlValue.includes("http://") && !urlValue.includes("https://")) urlvalue = `https://${urlValue}`;
   if (!validateForm(nameValue, urlValue)) return false;
+
+  const bookmark = {
+    name: nameValue,
+    url: urlValue,
+  };
+
+  bookmarks.push(bookmark);
+  localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+  fetchBookmarks();
+  bookmarkForm.reset();
+  websiteName.focus();
 }
 
 function validateForm(nameValue, urlValue) {
@@ -40,3 +68,6 @@ modalShow.addEventListener("click", showModal);
 modalClose.addEventListener("click", () => modal.classList.remove("show-modal"));
 window.addEventListener("click", (e) => (e.target === modal ? modal.classList.remove("show-modal") : false));
 bookmarkForm.addEventListener("submit", storeBookmark);
+
+// On load
+fetchBookmarks();
