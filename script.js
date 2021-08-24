@@ -12,6 +12,38 @@ let defaultBookmarks = [
     name: "Custom Countdown",
     url: "https://luisluft.github.io/luftCustomCountdown/",
   },
+  {
+    name: "Music Player",
+    url: "https://luisluft.github.io/luftMusicPlayer/",
+  },
+  {
+    name: "Navigation Nation",
+    url: "https://luisluft.github.io/luftNavigationNation/",
+  },
+  {
+    name: "Animated Template",
+    url: "https://luisluft.github.io/luftAnimatedTemplate/",
+  },
+  {
+    name: "Light and Dark Mode",
+    url: "https://luisluft.github.io/luftLightDarkMode/",
+  },
+  {
+    name: "Joke Teller",
+    url: "https://luisluft.github.io/luftJokeTeller/",
+  },
+  {
+    name: "Quote Generator",
+    url: "https://luisluft.github.io/luftQuoteGenerator/",
+  },
+  {
+    name: "Picture in Picture",
+    url: "https://luisluft.github.io/luftPictureInPicture/",
+  },
+  {
+    name: "Infinity Scroll",
+    url: "https://luisluft.github.io/luftInfinityScroll/",
+  },
 ];
 
 function showModal() {
