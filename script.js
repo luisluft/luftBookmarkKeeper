@@ -7,6 +7,12 @@ const websiteUrl = document.getElementById("website-url");
 const bookmarkContainer = document.getElementById("bookmarks-container");
 
 let bookmarks = [];
+let defaultBookmarks = [
+  {
+    name: "Custom Countdown",
+    url: "https://luisluft.github.io/luftCustomCountdown/",
+  },
+];
 
 function showModal() {
   modal.classList.add("show-modal");
@@ -14,6 +20,8 @@ function showModal() {
 }
 
 function buildBookmarks() {
+  bookmarkContainer.textContent = "";
+
   bookmarks.forEach((bookmark) => {
     const { name, url } = bookmark;
 
@@ -45,16 +53,22 @@ function buildBookmarks() {
   });
 }
 
+function deleteBookmark(url) {
+  bookmarks.forEach((bookmark, i) => {
+    if (bookmark.url === url) {
+      bookmarks.splice(i, 1);
+    }
+  });
+
+  localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+  fetchBookmarks();
+}
+
 function fetchBookmarks() {
   if (localStorage.getItem("bookmarks")) {
     bookmarks = JSON.parse(localStorage.getItem("bookmarks"));
   } else {
-    bookmarks = [
-      {
-        name: "Custom Countdown",
-        url: "https://luisluft.github.io/luftCustomCountdown/",
-      },
-    ];
+    bookmarks = defaultBookmarks;
     localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
   }
   buildBookmarks();
