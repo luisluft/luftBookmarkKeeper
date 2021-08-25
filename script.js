@@ -44,6 +44,10 @@ let defaultBookmarks = [
     name: "Infinity Scroll",
     url: "https://luisluft.github.io/luftInfinityScroll/",
   },
+  {
+    name: "Video Player",
+    url: "https://luisluft.github.io/luftVideoPlayer/",
+  },
 ];
 
 function showModal() {
