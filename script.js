@@ -48,6 +48,14 @@ let defaultBookmarks = [
     name: "Video Player",
     url: "https://luisluft.github.io/luftVideoPlayer/",
   },
+  {
+    name: "Form Validator",
+    url: "https://luisluft.github.io/luftFormValidator/",
+  },
+  {
+    name: "Rock Paper Scissors Lizard Spock",
+    url: "https://luisluft.github.io/luftRockPaperScissorsLizardSpock/",
+  },
 ];
 
 function showModal() {
