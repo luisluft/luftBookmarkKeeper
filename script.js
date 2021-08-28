@@ -56,6 +56,10 @@ let defaultBookmarks = [
     name: "Rock Paper Scissors Lizard Spock",
     url: "https://luisluft.github.io/luftRockPaperScissorsLizardSpock/",
   },
+  {
+    name: "NASA APOD",
+    url: "https://luisluft.github.io/luftNasaApod/",
+  },
 ];
 
 function showModal() {
