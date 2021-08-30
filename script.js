@@ -60,6 +60,10 @@ let defaultBookmarks = [
     name: "NASA APOD",
     url: "https://luisluft.github.io/luftNasaApod/",
   },
+  {
+    name: "Math Sprint Game",
+    url: "https://luisluft.github.io/luftMathSprintGame/",
+  },
 ];
 
 function showModal() {
