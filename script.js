@@ -64,6 +64,10 @@ let defaultBookmarks = [
     name: "Math Sprint Game",
     url: "https://luisluft.github.io/luftMathSprintGame/",
   },
+  {
+    name: "Kanban Board",
+    url: "https://luisluft.github.io/luftKanbanBoard/",
+  },
 ];
 
 function showModal() {
