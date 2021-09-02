@@ -68,6 +68,10 @@ let defaultBookmarks = [
     name: "Kanban Board",
     url: "https://luisluft.github.io/luftKanbanBoard/",
   },
+  {
+    name: "Calculator",
+    url: "https://luisluft.github.io/luftCalculator",
+  },
 ];
 
 function showModal() {
