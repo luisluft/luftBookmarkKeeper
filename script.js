@@ -39,6 +39,7 @@ let defaultBookmarks = [
   {
     name: "Picture in Picture",
     url: "https://luisluft.github.io/luftPictureInPicture/",
+    computer: "yes",
   },
   {
     name: "Infinity Scroll",
@@ -76,6 +77,11 @@ let defaultBookmarks = [
     name: "Splash Page",
     url: "https://luisluft.github.io/luftSplashPage",
   },
+  {
+    name: "Paint",
+    url: "https://luisluft.github.io/luftPaint",
+    computer: "yes",
+  },
 ];
 
 function showModal() {
@@ -87,7 +93,7 @@ function buildBookmarks() {
   bookmarkContainer.textContent = "";
 
   bookmarks.forEach((bookmark) => {
-    const { name, url } = bookmark;
+    const { name, url, computer } = bookmark;
 
     const item = document.createElement("div");
     item.classList.add("item");
@@ -108,7 +114,7 @@ function buildBookmarks() {
     const link = document.createElement("a");
     link.setAttribute("href", `${url}`);
     link.setAttribute("target", "_blank");
-    link.textContent = name;
+    link.textContent = computer === "yes" ? `${name} (computer only)` : name;
 
     // Append all the different previously created html elements
     linkInfo.append(favicon, link);
