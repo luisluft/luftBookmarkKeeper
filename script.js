@@ -72,6 +72,10 @@ let defaultBookmarks = [
     name: "Calculator",
     url: "https://luisluft.github.io/luftCalculator",
   },
+  {
+    name: "Splash Page",
+    url: "https://luisluft.github.io/luftSplashPage",
+  },
 ];
 
 function showModal() {
