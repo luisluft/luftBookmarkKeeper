@@ -82,6 +82,11 @@ let defaultBookmarks = [
     url: "https://luisluft.github.io/luftPaint",
     computer: "yes",
   },
+  {
+    name: "Pong Game",
+    url: "https://luisluft.github.io/luftPongGame",
+    computer: "yes",
+  },
 ];
 
 function showModal() {
