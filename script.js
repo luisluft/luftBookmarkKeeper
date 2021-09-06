@@ -90,6 +90,7 @@ let defaultBookmarks = [
   {
     name: "Monsters Rolodex",
     url: "https://luisluft.github.io/my-monsters-rolodex/",
+    computer: "yes",
   },
 ];
 
