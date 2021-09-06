@@ -87,6 +87,10 @@ let defaultBookmarks = [
     url: "https://luisluft.github.io/luftPongGame",
     computer: "yes",
   },
+  {
+    name: "Monsters Rolodex",
+    url: "https://luisluft.github.io/my-monsters-rolodex/",
+  },
 ];
 
 function showModal() {
